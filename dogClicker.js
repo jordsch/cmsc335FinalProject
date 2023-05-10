@@ -93,10 +93,11 @@ async function updateUser(username, newValues) {
         console.error(e);
     }
 }
+let port = process.env.PORT || 5000
 
 //Hosting on the provided port number
-app.listen(8000);
-console.log(`Web server started and running at http://localhost:8000`);
+app.listen(port);
+console.log(`Web server started and running at Port ${port}`);
 
 let pets = 0;
 let pet_click_amount = 1;
