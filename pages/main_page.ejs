@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Dog Clicker</title>
+        <link rel="stylesheet" href="main_page.css">
+    </head>
+
+    <body>
+        <div class = "side">
+            <div>
+                <form action="/upgrade1" method="get" >
+                    <button type ="submit" class="upgrade">Buy small dog treat <img src="upgrade1.png" alt="upgrade1" class ='icon' id = "u1"> 10 pets </button>
+                </form>
+            </div>
+            <div>
+                <form action="/upgrade2" method="get" >
+                    <button type ="submit" class="upgrade">Buy large dog treat <img src="upgrade1.png" alt="upgrade2" class ='icon' id = "u2"> 100 pets</button>
+                </form>
+            </div>
+            <div>
+                <form action="/upgrade3" method="get" >
+                    <button type ="submit" class="upgrade">Buy chew toy <img src="upgrade3.png" alt="upgrade3" class ='icon' id = "u3"> 1000 pets</button>
+                </form>
+
+            </div>
+            <div>
+                <form action="/upgrade4" method="get" >
+                    <button type ="submit" class="upgrade">Buy squeaky toy <img src="upgrade4.png" alt="upgrade4" class ='icon' id = "u4"> 10000 pets</button>
+                </form>
+            </div>
+            <div>
+                <form action="/upgrade5" method="get" >
+                    <button type ="submit" class="upgrade">Buy Dog Bed <img src="upgrade5.png" alt="upgrade5" class ='icon' id = "u5"> 100000 pets</button>
+                </form>
+            </div>
+
+            <div>
+                <form action="/login" method="post" >
+                    <input type="text" placeholder="Enter Username" name="username" required>
+                    <input type="text" placeholder="Enter Password" name="password" required>
+                    <button type ="submit">load progress</button>
+                </form>
+            </div>
+
+            <div>
+                <form action="/save" method="post" >
+                    <input type="text" placeholder="Enter Username" name="username" required>
+                    <input type="text" placeholder="Enter Password" name="password" required>
+                    <button type ="submit">save progress</button>
+                    <p>Disclaimer: when saving password, it will save in plaintext to the database so don't put a password you actually use otherwise I can see it stored</p> 
+                </form>
+            </div>
+
+        </div>
+        <div class = "body">
+            <h1>Dog Clicker</h1>
+            <form action="/click" method="get" >
+                <button type ="submit" id="doggie">
+                    <%- dog_img %>
+                </button>
+            </form>
+            <div>
+                <%- pet_amount %>
+            </div>
+        </div>
+    </body>
+
+    
+</html>
